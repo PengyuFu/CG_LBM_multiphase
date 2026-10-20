@@ -1,0 +1,39 @@
+name: 问题反馈
+description: 报告可复现的软件问题
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: "提交前请检查附件，不要公开API Key、完整日志、个人路径或未获准披露的科研数据。"
+  - type: input
+    id: version
+    attributes:
+      label: 软件版本
+      placeholder: "0.1.3"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 系统与显卡
+      description: "Windows版本、GPU型号、驱动版本；可附自行检查过的诊断摘要。"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: "说明二维/三维、内置算例或可分享的最小输入、操作顺序。"
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: 预期与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: attachment
+    attributes:
+      label: 可公开的截图或诊断摘要
+      description: "不要上传完整JSONL会话日志、API配置文件或受限数据。"
